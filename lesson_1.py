@@ -21,15 +21,14 @@ elif command == 3:
     print(int(str(number) + str(number) + str(number)) + int(str(number) + str(number)) + number)
 elif command == 4:
     number = input("Введите число для поиска наибольшей цифры: ")
-    i = len(number)
     max_number = 0
-    while i > 0:
-        if int(number[i - 1]) > max_number:
-            max_number = int(number[i - 1])
-        else:
-            continue
-        i = - 1
+    i = 0
+    while i < len(number):
+        if int(number[i]) > max_number:
+            max_number = int(number[i])
+        i += 1
     print(max_number)
+
 elif command == 5:
     income = int(input("Введите данные о выручке фирмы: "))
     cost = int(input("Введите данные о издержках фирмы: "))
